@@ -45,6 +45,10 @@ const styles = StyleSheet.create({
     fontSize: 30,
     letterSpacing: 0.25,
     color: "purple",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "row",
   },
 
   input: {

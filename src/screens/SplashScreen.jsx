@@ -1,5 +1,6 @@
 import { ActivityIndicator, Text } from "react-native-paper";
 import { View } from "react-native";
+import styles from "../utils/styles";
 
 export default function SplashScreen({ navigation }) {
   setTimeout(() => {
@@ -7,10 +8,10 @@ export default function SplashScreen({ navigation }) {
   }, 300);
 
   return (
-    <View>
+    <View style={styles.container}>
       <ActivityIndicator color="#F28705" />
-      <Text>
-        <h1>Aguarde um instante</h1>
+      <Text style={styles.text}>
+        <h3>Aguarde um instante</h3>
       </Text>
     </View>
   );

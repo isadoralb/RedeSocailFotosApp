@@ -37,15 +37,14 @@ function TabsNavigation() {
       // cardStyle={{backgroundColor:'transparent'}}
       screenOptions={{
         headerStyle: {
-          backgroundColor: '#00305A',
+          backgroundColor: "#00305A",
         },
 
         headerTitleStyle: {
-          color: '#00305A'
+          color: "#00305A",
         },
 
-        headerTintColor: '#fff',
-
+        headerTintColor: "#fff",
       }}
     >
       <Tabs.Screen
@@ -53,7 +52,7 @@ function TabsNavigation() {
         component={HomeScreen}
         options={{
           tabBarLabel: "Home",
-          headerShown: false
+          headerShown: false,
         }}
       />
       <Tabs.Screen
@@ -71,20 +70,20 @@ function TabsNavigation() {
         }}
       />
       <Tabs.Screen
-      name="RecSenhaScreen"
-      component={RecSenhaScreen}
-      options={{
-        tabBarLabel: "RecSenhaScreen",
-      }}
-    />
-    <Tabs.Screen
-      name="TelaInicial"
-      component={TelaInicial}
-      options={{
-        tabBarLabel: "TelaInicial",
-        headerShown: false,
-      }}
-    />
+        name="RecSenhaScreen"
+        component={RecSenhaScreen}
+        options={{
+          tabBarLabel: "RecSenhaScreen",
+        }}
+      />
+      <Tabs.Screen
+        name="TelaInicial"
+        component={TelaInicial}
+        options={{
+          tabBarLabel: "TelaInicial",
+          headerShown: false,
+        }}
+      />
     </Tabs.Navigator>
   );
 }
