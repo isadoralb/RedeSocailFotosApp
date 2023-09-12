@@ -1,11 +1,11 @@
 import React from "react";
 import { FlatList, Image, StyleSheet, Text, View } from "react-native";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 import { useCollectionData } from "react-firebase-hooks/firestore";
-import firebase from "firebase/app";
+// import firebase from "firebase/app";
 import { db } from "../config/firebase";
 
-const firestore = firebase.firestore();
+const firestore = db;
 
 const FeedPhotos = () => {
   const imagesRef = collection(db, "images");
@@ -15,9 +15,9 @@ const FeedPhotos = () => {
     <View style={styles.container}>
       <FlatList
         data={images}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => item.imageURL}
         renderItem={({ item }) => (
-          <View style={styles.imageContainer}>
+          <View style={styles.imageContainer} key={item.imageURL}>
             <Image source={{ uri: item.imageURL }} style={styles.image} />
           </View>
         )}
